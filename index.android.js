@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,6 +5,7 @@ import {
   Text,
   View
 } from 'react-native';
+import * as firebase from "firebase";
 
 export default class ReactNativeIotLamp extends Component {
   render() {
@@ -30,6 +25,14 @@ export default class ReactNativeIotLamp extends Component {
     );
   }
 }
+
+firebase.initializeApp({
+ apiKey: "AIzaSyA5rK5JDZFjY5SpIL5FwlXhx8Sty-k9FBs",
+    authDomain: "fir-database-f6b5a.firebaseapp.com",
+    databaseURL: "https://fir-database-f6b5a.firebaseio.com",
+    storageBucket: "fir-database-f6b5a.appspot.com",
+    messagingSenderId: "443316178527"
+});
 
 const styles = StyleSheet.create({
   container: {
